@@ -1,14 +1,42 @@
 {
-    "employees": [
+    "clothing": [
       {
         "id": 1,
-        "name": "Pankaj",
-        "salary": "10000"
+        "name": "T'Shirt",
+        "description": "A comfortable cotton t-shirt",
+        "price": "$250.00",
+        "image": ""
       },
       {
-        "name": "David",
-        "salary": "5000",
-        "id": 2
-      }
+        "id": 2,
+        "name": "Joggy Pants",
+        "description": "A comfortable pair of joggy pants",
+        "price": "$3000.00",
+        "image": ""
+      },
+      {
+      "id": 3,
+      "name": "V Neck ",
+      "description": "A comfortable supima cotton v neck shirt",
+      "price": "$500.00",
+      "image": ""
+      },
+
+      {
+        "id": 4,
+        "name": "Socks",
+        "description": "A comfortable pair of cotton socks",
+        "price": "$150.00",
+        "image": ""
+        },
+
+        {
+          "id": 5,
+          "name": "Sweater",
+          "description": "A comfortable cashmere sweater",
+          "price": "$5000.00",
+          "image": ""
+          }
+
     ]
   }
