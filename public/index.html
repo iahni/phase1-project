@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Phase 1 Project</title>
+        <meta charset = "UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+
+        <div class="form-popup" id="myForm">
+            <form id="signup-form">
+                <img id="bf-logo-form" src="icons/BuddyFinder.png" />
+                <h2> New user sign-up</h2>
+                <label for="user-name">Name: </label>
+                <input type="text" id="user-name" />
+                
+                <label for="user-location">Location: </label>
+                <input type="text" id="user-location" />
+    
+                <label for="user-age">Age: </label>
+                <input type="number" id="user-age" min="0"/>
+    
+                <label for="user-gender">Gender: </label>
+                <!--<input type="text" id ="user-gender" /> -->
+                <select name="user-gender" id="user-gender">
+                    <option value="">--Please choose an option--</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                </select>
+
+    
+                <label for="profile-photo">Upload a photo (URL): </label>
+                <input type="text" id="profile-photo" />
+    
+                <input type="submit" id="sign-up-submit" class="btn btn-primary" value="Create Profile">
+            </form>
+        </div>
+
+
+        <div id="site-logo">
+        </div>
+        <img id="bf-logo" src="icons/BuddyFinder.png" />
+
+        <button id="profileDrop" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#profileInfo" aria-expanded="false" aria-controls="profileInfo">
+        <img id="profilePic" src="icons/genericUser.jpg" />
+        </button>
+        <div class="collapse" id="profileInfo">
+            <div class="card card-body" id="dropInfo">
+                <p class="card-text">Name: <span id="userName" contenteditable="false"></span></p>
+                <p class="card-text">Location: <span id="userLocation" contenteditable="false"></span></p>
+                <p class="card-text">Age: <span id="userAge" contenteditable="false"></span></p>
+                <p class="card-text">Gender: <span id="userGender" contenteditable="false"></span></p>
+                <button id="edit" class="btn btn-primary btn-sm">Edit</button>
+                <button id="log-off" class="btn btn-secondary btn-sm">Log Off</button>
+            </div>
+        </div>
+
+
+    <div>
+        <div id="filter-users">
+            <form id="filter-user-form">
+                <!--<label for="filter-gender">Gender: </label> -->
+                <div class="filter-input">
+                    <input type="radio" id="filter-male" name="filter-gender" value="male"/>
+                    <label for="filter-male">Male </label>
+                </div>
+                <div class="filter-input">
+                    <input type="radio" id="filter-female" name ="filter-gender" value="female" />
+                    <label for="filter-female">Female </label>
+                </div>
+                <div class="filter-input">
+                    <input type="radio" id="filter-gender-all" name ="filter-gender" value="all"/>
+                    <label for="filter-gender-all">All </label>
+                </div>                
+                <input type="submit" id="sign-up-submit" value="Filter">
+            </form>
+        </div>
+        <div id="display-users">
+            <h2>Find others</h2>
+            <div class="card" id="main-user-card" style="width: 30rem;">
+                <img id="other-img" class="card-img-top"/>
+                <div class="card-body">
+                    <h3 id="other-name" class="card-title"></h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><img src= "icons/age-icon.png" class="card-icon"/><span id="other-age"></span> years</li>
+                        <li class="list-group-item"><img src= "icons/location-icon.png" class="card-icon"/><span id="other-location"></span></li>
+                        <li class="list-group-item"><img src= "icons/gender-icon.png" class="card-icon"/><span id="other-gender"></span></li>
+                        <li class="list-group-item"><img src= "icons/breed-icon.png" class="card-icon"/><span id="other-breed"></span></li>
+                    </ul>
+                    <button id="dislike-user" class="btn btn-danger">Dislike</button>
+                    <button id="like-user" class="btn btn-success">Like</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="my-likes">
+            <h2 class="text-center">My likes</h2>
+            <div id="likes-nav">
+            </div>
+            <div class="card" style="max-width: 1200px; margin: auto;">
+                <div class="row g-0">
+                  
+                  <div class="col-4">
+                    <div class="card-body" id="likes-detail">
+                        <h3 id="likes-name" class="card-title"></h3>
+                        <p class="card-text">Age: <span id="likes-age"></span></p>
+                        <p class="card-text">Location: <span id="likes-location"></span></p>
+                        <p class="card-text">Gender: <span id="likes-gender"></span></p>
+                        <p class="card-text">Breed: <span id="likes-breed"></span></p>
+                    </div>
+                  </div>
+                  <div class="col-4 justify-content-center">
+                    <img id="likes-img" class="img-fluid rounded-end justify-content-right" src="icons/genericUser.jpg">
+                  </div>
+                  <div class="col-4">
+                    <div id="message-section">
+                        <h3 id="message-title">Send a message</h3>
+                        <div id="message-log">
+                            
+                        </div>
+                        <form id="message-form">
+                            <div class="message-input">
+                                <label for="message-like">Send a message: </label>
+                                <input type="text" id="message-like" />
+                                <input type="submit" value="Send"/>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container py-4">
+            <h2 class="text-center">Data</h2>
+            <div class="row justify-content-center">
+                <div class="col-5 rounded">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h3>Top Breeds</h3>
+                        </div>   
+                    </div> 
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="text-center">Me</h4>
+                            <ol id="my-top-breeds">
+                            </ol>
+                        </div>
+                        <div class="col align-items-center">
+                            <h4 class="text-center">Everyone</h4>
+                            <ol id="top-breeds">
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <h3>Top Genders</h3>
+                        </div>   
+                    </div>    
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="text-center">Me</h3>
+                            <ol id="my-top-genders">
+                            </ol>
+                        </div>
+                        <div class="col">
+                            <h4 class="text-center">Everyone</h4>
+                            <ol id="top-genders">
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="text-center">
+                                <button id="refresh-data" type="button" class="btn btn-primary">Refresh Data</button>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+                
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>
