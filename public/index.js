@@ -1,4 +1,4 @@
-fetch('clothing.json')
+fetch('db.json')
 .then(Response =>Response.json())
 .then(data =>
     {var clothingList =
