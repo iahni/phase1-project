@@ -7,27 +7,33 @@ fetch('products.json')
         console.log(data);
     var products = data.products;
 
-    products.forEach(function(product)
-     { console.log('ID:',product.id);
-     console.log('Name:', product.name);
-     console.log('Description:', product.description);
-     });
+    products.forEach(function(products)
+     { console.log('ID:',products.id);
+     console.log('Name:', products.name);
+     console.log('Description:', products.description);
+     console.log ('Price:', products.price);
+     console.log('Image:', products.image);
+
+
    var listItem = document.createElement('li');
         var nameElement =
-        document.createElement('h2');
+        document.createElement('h4');
         var priceElement =
         document.createElement('p');
         var descriptionElement =
         document.createElement('p');
+        var imageElement =
+        document.createElement('p');
+        
         nameElement.textContent= products.name;
-        priceElement.textContent = 'Price: $', + 
-        products.price.toFixed(2);
+        priceElement.textContent = 'Price: $' + products.price;
         descriptionElement.textContent = products.description;
-
+        imageElement =
+        document.createElement('p');
+      
         listItem.appendChild(nameElement);
         listItem.appendChild(priceElement);
         listItem.appendChild(descriptionElement);
         productList.appendChild(listItem);
 });
-;
-
+});
