@@ -1,7 +1,7 @@
-fetch('db.json')
+fetch('data.json')
 .then(response =>response.json())
 .then(data =>{
-    var clothingList =
-        document.getElementById('clothingList');
-    var clothing = data.clothing;
+    var productList =
+        document.getElementById('productList');
+    var 
     clothing
