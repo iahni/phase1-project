@@ -9,7 +9,7 @@ body {
     padding-right: 75px;
     text-align: center;
   }
-select[name="menu"]{
+.option{
   text-align:center;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -29,3 +29,5 @@ p{
     padding-right: 75px;
     text-align: center;
   }
+
+
