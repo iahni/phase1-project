@@ -4,14 +4,28 @@ body {
    
   }
   h1{
-    background-color: #d8cdcd;
+ 
     color: #fff;
     padding-right: 75px;
+    text-align: center;
   }
-  h2{
-    background-color: #d8cdcd;
+select[name="menu"]{
+  text-align:center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.section1{
+  text-align: center;
+}
+
+h2{
+ 
+
+  padding-right: 45px;
+  text-align: center;
+}
+p{
+ 
     color: #fff;
     padding-right: 75px;
+    text-align: center;
   }
-  
-  

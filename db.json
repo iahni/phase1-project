@@ -5,7 +5,7 @@
         "name": "T'Shirt",
         "description": "A comfortable cotton t-shirt",
         "price": "$250.00",
-        "image": ""
+        "image": "public/favicon/people-gac32ed2f1_1280.jpg"
       },
       {
         "id": 2,
@@ -19,7 +19,7 @@
       "name": "V Neck ",
       "description": "A comfortable supima cotton v neck shirt",
       "price": "$500.00",
-      "image": ""
+      "image": "public/favicon/model-g57050803f_1280.jpg"
       },
 
       {
@@ -35,7 +35,7 @@
           "name": "Sweater",
           "description": "A comfortable cashmere sweater",
           "price": "$5000.00",
-          "image": ""
+          "image": "public/favicon/black-g895bef188_1280.jpg"
           }
 
     ]
