@@ -3,8 +3,15 @@ body {
     background-color: #47807daa;
    
   }
-  header{
+  h1{
     background-color: #d8cdcd;
     color: #fff;
-    padding-left: 20px;
+    padding-right: 75px;
   }
+  h2{
+    background-color: #d8cdcd;
+    color: #fff;
+    padding-right: 75px;
+  }
+  
+  
