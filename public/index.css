@@ -9,10 +9,7 @@ body {
     padding-right: 75px;
     text-align: center;
   }
-.option{
-  text-align:center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+
 .section1{
   text-align: center;
 }
@@ -30,8 +27,11 @@ p{
   text-align: center;
 }
 form{
- 
-  color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border:1px solid #ccc;
+    background-color: #47807daa;
+    cursor: pointer;
   padding-right: 75px;
   text-align: center;
 }
@@ -46,4 +46,10 @@ ul{
   color: #360f0f;
   text-align: center;
 }
-
+ul#productList li{
+  margin-bottom: 10px;
+  padding: 10px;
+  border:1px solid #ccc;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
