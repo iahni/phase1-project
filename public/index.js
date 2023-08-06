@@ -48,7 +48,16 @@ productList.addEventListener('click',function(event) {
         if (hoveredItem.tagName ==='LI'){
             hoveredItem.style.backgroundColor =
             'lightgray';
-        
+    var myForm =
+    document.getElementById('myForm');
+    myForm.addEventListener('submit',
+    function(event){
+        event.preventDefault();
+    var formData =new FormData(myForm);
+    var formValues =
+    Object.fromEntries(formData.entries());
+    console.log('Form submitted:', formValues);
+    })
         }
     })
      }});
