@@ -35,5 +35,22 @@ fetch('products.json')
         listItem.appendChild(priceElement);
         listItem.appendChild(descriptionElement);
         productList.appendChild(listItem);
-});
+
+productList.addEventListener('click',function(event) {
+    var clickedItem = event.target;
+    if (clickedItem.tagName ==='LI'){
+        console.log('Clicked on product:',
+        clickedItem.textContent);
+
+    productList.addEventListener('mouseover',
+    function (event){
+        var hoveredItem =event.target;
+        if (hoveredItem.tagName ==='LI'){
+            hoveredItem.style.backgroundColor =
+            'lightgray';
+        
+        }
+    })
+     }});
+    });
 });
